@@ -1,16 +1,14 @@
 // complete the given function
 
 function palindrome(str){
-var len = str.length;
-    var mid = Math.floor(len/2);
-
-    for ( var i = 0; i < mid; i++ ) {
-        if (str[i] !== str[len - 1 - i]) {
-            return false;
-        }
-    }
-
-    return true;
+const st = str.toLowerCase();
+	const len = str.length;
+	for(let i=0; i<len/2; i++){
+		if(st[i] !== st[len-i-1]){
+			return false;
+		}
+	}
+	return true;
 }
-}
+
 module.exports = palindrome
